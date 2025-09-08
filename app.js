@@ -246,7 +246,7 @@ function graphNormalizedY() {
             labels: normalizedTableValues.x,
             datasets: [
                 {
-                    label: "Normalized Y",
+                    label: "Y Normalizado",
                     data: normalizedTableValues.y,
                     borderColor: "rgba(75, 192, 192, 1)",
                     borderWidth: 1,
