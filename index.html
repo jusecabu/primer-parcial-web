@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Primer Parcial Programación Web</title>
+    </head>
+    <body>
+        <div class="main-layout">
+            <div class="controls">
+                <label>
+                    Factor de multiplicación de los coeficientes:
+                    <input
+                        id="factorInput"
+                        type="number"
+                        step="any"
+                        value="10"
+                    />
+                </label>
+                <button id="applyBtn">Aplicar factor</button>
+            </div>
+            <div class="content">
+                <div id="coefficientTable"></div>
+                <div id="mainTable" class="scrollable-table"></div>
+                <div id="maxAndMinTable"></div>
+                <div id="normalizedTable" class="scrollable-table"></div>
+                <canvas id="normalizedChart"></canvas>
+                <div id="averageY01Table"></div>
+                <canvas id="averageY01Chart"></canvas>
+                <div id="averageY005Table" class="scrollable-table"></div>
+                <canvas id="averageY005Chart"></canvas>
+                <canvas id="combinedCharts"></canvas>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type="module" src="app.js"></script>
+    </body>
+</html>

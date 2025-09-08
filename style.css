@@ -1,0 +1,131 @@
+/* align numbers to the right, except for headers */
+body {
+    padding: 40px;
+    background: #f4f8fb;
+    color: #223046;
+    font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fafdff;
+    box-shadow: 0 2px 8px rgba(34, 48, 70, 0.04);
+}
+
+th,
+td {
+    border: 1px solid #d0e2f2;
+    padding: 10px 12px;
+    text-align: right;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #e3f0fa;
+    color: #223046;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* need just to see 10 first then scroll, and header fixed */
+.scrollable-table {
+    max-height: 422px;
+    overflow-y: auto;
+    margin-bottom: 24px;
+    border: 1px solid #d0e2f2;
+    background: #fafdff;
+}
+
+.scrollable-table th {
+    position: sticky;
+    top: 0;
+    background-color: #e3f0fa;
+    z-index: 2;
+}
+
+.scrollable-table table th,
+.scrollable-table table td {
+    border-top: none;
+    border-left: none;
+}
+
+/* Last tr in the scrolable-table the td should have a border-bottom */
+.scrollable-table tr:last-child td {
+    border-bottom: none;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.controls {
+    min-width: 260px;
+    max-width: 320px;
+    background: #eaf4fb;
+    border: 1px solid #b3d0ea;
+    border-radius: 14px;
+    padding: 28px 20px;
+    position: sticky;
+    top: 40px;
+    height: fit-content;
+    box-shadow: 0 4px 16px rgba(34, 48, 70, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.controls label {
+    font-size: 1.05rem;
+    color: #223046;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.controls input[type="number"] {
+    padding: 8px 10px;
+    border: 1px solid #b3d0ea;
+    border-radius: 6px;
+    background: #fafdff;
+    color: #223046;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.controls input[type="number"]:focus {
+    border: 1.5px solid #5ba4e5;
+    background: #e3f0fa;
+}
+
+.controls button {
+    margin-top: 8px;
+    padding: 10px 0;
+    background: linear-gradient(90deg, #5ba4e5 0%, #3b6ea8 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(34, 48, 70, 0.07);
+    transition: background 0.2s, transform 0.1s;
+}
+
+.controls button:hover {
+    background: linear-gradient(90deg, #3b6ea8 0%, #5ba4e5 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px; /* separación entre tablas */
+}
